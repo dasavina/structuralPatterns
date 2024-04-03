@@ -16,13 +16,14 @@ public class Main {
 
         GeneralBuilding building = new Building();
 
-        System.out.println("оберіть властивості: " +
-                "\n(1) Багатоповерховий" +
-                "\n(2) Має двері" +
-                "\n(3) Має вікна" +
-                "\n(4) Має горище" +
-                "\n(5) Має підвал" +
-                "\nвведення чисел через пропуск");
+        System.out.println("""
+                оберіть властивості:
+                (1) Багатоповерховий
+                (2) Має двері
+                (3) Має вікна
+                (4) Має горище
+                (5) Має підвал
+                введення чисел через пропуск""");
         Scanner scanner = new Scanner(System.in);
         String[] instructions = scanner.nextLine().split(" ");
         BuildingDecorating decorator = new BuildingDecorating();
