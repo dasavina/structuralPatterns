@@ -1,20 +1,24 @@
-import Decorator.*;
-import Decorator.decorators.*;
-import Decorator.factory.BuildingDecorating;
-
 import java.util.Scanner;
+
+import Bridge.buildings.Building;
+import Bridge.buildings.Theatre;
+import Bridge.generator.Generator;
+import Bridge.styles.Eclectic;
+import Bridge.styles.Style;
+import Decorator.decorators.*;
 
 public class Main {
     public static void main(String[] args) {
         useDecoratorPattern();
+        useBridgePattern();
     }
 
     public static void useDecoratorPattern()
     {
-        GeneralBuilding building1 = new Building();
-        GeneralBuilding building2 = new Building();
+        Decorator.GeneralBuilding building1 = new Decorator.Building();
+        Decorator.GeneralBuilding building2 = new Decorator.Building();
 
-        GeneralBuilding building = new Building();
+        Decorator.GeneralBuilding building = new Decorator.Building();
 
         System.out.println("""
                 оберіть властивості:
@@ -26,21 +30,23 @@ public class Main {
                 введення чисел через пропуск""");
         Scanner scanner = new Scanner(System.in);
         String[] instructions = scanner.nextLine().split(" ");
-        BuildingDecorating decorator = new BuildingDecorating();
+        Decorator.factory.BuildingDecorating decorator = new Decorator.factory.BuildingDecorating();
         building = decorator.decorate(building, instructions);
         building.describe();
+    }
+    public static void useBridgePattern()
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("введіть тип будови");
+        String buildingType = scanner.nextLine();
+        System.out.println("введіть стиль");
+        String styleName = scanner.nextLine();
+        Generator.generate(styleName, buildingType).getDescription();
 
+    }
 
-        System.out.println("building1:");
-        building1 = new DoorsDecorator(building1);
-        building1 = new WindowsDecorator(building1);
-        building1.describe();
+    public static void useProxyPattern()
+    {
 
-        System.out.println("building2");
-        building2 = new DoorsDecorator(building2);
-        building2 = new WindowsDecorator(building2);
-        building2 = new BasementDecorator(building2);
-        building2 = new FloorsDecorator(building2);
-        building2.describe();
     }
 }

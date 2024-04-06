@@ -1,6 +1,6 @@
 package Decorator.decorators;
 import Decorator.GeneralBuilding;
-public class BasementDecorator extends Decorator{
+public class BasementDecorator extends GeneralDecorator {
     public BasementDecorator(GeneralBuilding building) {
         super(building);
     }

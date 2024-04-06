@@ -1,9 +1,9 @@
 package Decorator.decorators;
 import Decorator.GeneralBuilding;
-public abstract class Decorator implements GeneralBuilding {
+public abstract class GeneralDecorator implements GeneralBuilding {
     GeneralBuilding building;
 
-    public Decorator(GeneralBuilding building) {
+    public GeneralDecorator(GeneralBuilding building) {
         this.building = building;
     }
 }

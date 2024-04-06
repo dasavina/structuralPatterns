@@ -1,6 +1,6 @@
 package Decorator.decorators;
 import Decorator.GeneralBuilding;
-public class DoorsDecorator extends Decorator{
+public class DoorsDecorator extends GeneralDecorator {
     public DoorsDecorator(GeneralBuilding building) {
         super(building);
     }
