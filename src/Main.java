@@ -1,16 +1,12 @@
 import java.util.Scanner;
-
-import Bridge.buildings.Building;
-import Bridge.buildings.Theatre;
 import Bridge.generator.Generator;
-import Bridge.styles.Eclectic;
-import Bridge.styles.Style;
-import Decorator.decorators.*;
+import Proxy.renderMap.Map;
 
 public class Main {
     public static void main(String[] args) {
-        useDecoratorPattern();
-        useBridgePattern();
+//        useDecoratorPattern();
+//        useBridgePattern();
+        useProxyPattern();
     }
 
     public static void useDecoratorPattern()
@@ -47,6 +43,9 @@ public class Main {
 
     public static void useProxyPattern()
     {
-
+        Map map = new Map();
+        map.renderWithoutProxy();
+        System.out.println("----------------------------------------------");
+        map.renderWithProxy();
     }
 }
