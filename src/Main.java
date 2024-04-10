@@ -1,21 +1,19 @@
 import java.util.Scanner;
 import Bridge.generator.Generator;
+import Facade.City;
 import Proxy.renderMap.Map;
 
 public class Main {
     public static void main(String[] args) {
 //        useDecoratorPattern();
 //        useBridgePattern();
-        useProxyPattern();
+//        useProxyPattern();
+        useFacadePattern();
     }
 
     public static void useDecoratorPattern()
     {
-        Decorator.GeneralBuilding building1 = new Decorator.Building();
-        Decorator.GeneralBuilding building2 = new Decorator.Building();
-
         Decorator.GeneralBuilding building = new Decorator.Building();
-
         System.out.println("""
                 оберіть властивості:
                 (1) Багатоповерховий
@@ -47,5 +45,11 @@ public class Main {
         map.renderWithoutProxy();
         System.out.println("----------------------------------------------");
         map.renderWithProxy();
+    }
+
+    public static void useFacadePattern()
+    {
+        City city = new City();
+        city.generateCity();
     }
 }

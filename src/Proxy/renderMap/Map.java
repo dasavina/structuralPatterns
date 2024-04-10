@@ -13,9 +13,22 @@ public class Map {
         DistantCity distantCity2 = new DistantCity();
         System.out.println("rendering map");
         currentCity.renderMap();
+        System.out.println("doing something in the city");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("teleporting to other city");
         distantCity1.renderMap();
+        System.out.println("doing something in the city");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("teleporting to other city");
         distantCity2.renderMap();
-        System.out.println("map rendered");
     }
 
     public void renderWithProxy()
@@ -26,8 +39,21 @@ public class Map {
         Proxy distantCity2 = new Proxy();
         System.out.println("rendering map");
         currentCity.renderMap();
+        System.out.println("doing something in the city");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("teleporting to other city");
         distantCity1.renderMap();
+        System.out.println("doing something in the city");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("teleporting to other city");
         distantCity2.renderMap();
-        System.out.println("map rendered");
     }
 }
