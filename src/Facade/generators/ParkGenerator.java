@@ -3,7 +3,7 @@ package Facade.generators;
 import java.util.Random;
 
 public class ParkGenerator {
-    private static final String[] types = {"..", " ", "."};
+    private static final String[] types = {"amusement", "historical", "memorial"};
 
     public static String generateType() {
         Random random = new Random();

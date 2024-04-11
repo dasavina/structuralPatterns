@@ -8,7 +8,8 @@ public class Main {
 //        useDecoratorPattern();
 //        useBridgePattern();
 //        useProxyPattern();
-        useFacadePattern();
+//        useFacadePattern();
+        useCompositePattern();
     }
 
     public static void useDecoratorPattern()
@@ -51,5 +52,11 @@ public class Main {
     {
         City city = new City();
         city.generateCity();
+    }
+
+    public static void useCompositePattern()
+    {
+        int sum = Composite.generator.CompositeGenerator.generate(4, 5).count();
+        System.out.println("People living in this quarters: " + sum);
     }
 }

@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class RoadGenerator {
 
-    private static final String[] types = {"..", " ", "."};
+    private static final String[] types = {"highway", "main", "side"};
 
     public static String generateType() {
         Random random = new Random();
